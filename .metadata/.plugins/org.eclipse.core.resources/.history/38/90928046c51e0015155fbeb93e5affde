@@ -1,0 +1,23 @@
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+
+public class numbers {
+public static void main(String[] args) {
+numbers number = new numbers();	
+number.methods();
+}
+void methods(){
+	JFrame frame = new JFrame();
+	frame.setVisible(true);
+	
+	JPanel panel = new JPanel();
+	panel.setVisible(true);
+	
+	panel.setVisible(true);
+	
+	
+	frame.add(panel);
+	
+}
+}

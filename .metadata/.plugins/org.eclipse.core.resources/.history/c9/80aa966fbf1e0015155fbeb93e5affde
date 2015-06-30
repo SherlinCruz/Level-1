@@ -1,0 +1,36 @@
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+
+public class chucklecliker {
+public static void main(String[] args) {
+	makeButton();
+}
+
+static void makeButton()
+{
+	
+	JFrame frame = new JFrame();
+	JPanel panel = new JPanel();
+	JButton button = new JButton();
+	JButton but= new JButton();
+	
+	frame.add(panel);
+	panel.add(button);
+	panel.add(but);
+	
+	frame.setVisible(true);
+	panel.setVisible(true);
+	button.setVisible(true);
+	but.setVisible(true);
+	
+	
+	
+	
+	button.setText("joke");
+	but.setText("punchline");
+	
+	
+}
+}
