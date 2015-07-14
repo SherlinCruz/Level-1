@@ -8,17 +8,17 @@ import javax.swing.JPanel;
 
 public class numbers implements ActionListener {
 	
-	JButton add ;
+	JButton add;
 	JButton sub;
-	JButton add2 ;
-	JButton sub2;
+	JButton mul;
+	JButton div;
 	
-	int total = 0;
 	
 public static void main(String[] args) {
-numbers number = new numbers();	
-number.methods();
+	
+	
 }
+
 void methods(){
 	JFrame frame = new JFrame();
 	frame.setVisible(true);
@@ -28,30 +28,30 @@ void methods(){
 	
 	panel.setVisible(true);
 	
-	 add = new JButton ();
-	 sub = new JButton();
-	 add2 = new JButton ();
-	 sub2 = new JButton();
+	JButton add = new JButton ();
+	JButton sub = new JButton();
+	JButton mul = new JButton ();
+	JButton div = new JButton();
 	
 	
 	frame.add(panel);
 	panel.add(sub);
 	panel.add(add);
-	panel.add(sub2);
-	panel.add(add2);
+	panel.add(mul);
+	panel.add(div);
 	
-	add.setText("+1");
-	sub.setText("-1");
-	add2.setText("+2");
-	sub2.setText("-2");
+	add.setText("+");
+	sub.setText("-");
+	mul.setText("*");
+	div.setText("/");
 
 	add.addActionListener(this);
 
 	sub.addActionListener(this);
 
-	add2.addActionListener(this);
+	mul.addActionListener(this);
 
-	sub2.addActionListener(this);
+	div.addActionListener(this);
 	
 	frame.pack();
 	
@@ -61,25 +61,25 @@ void methods(){
 @Override
 public void actionPerformed(ActionEvent e) {
 	// TODO Auto-generated method stub
-	if(e.getSource() == add)
-	{
-		total +=  1 ;
-		System.out.println(total);
-	}
-	if(e.getSource() == sub)
-	{
-		total -= 1 ;
-		System.out.println(total);
-	}
-	if(e.getSource() == add2)
-	{
-		total +=  2 ;
-		System.out.println(total);
-	}
-	if(e.getSource() == sub2)
-	{
-		total -= 2 ;
-		System.out.println(total);
-	}
+//	if(e.getSource() == add)
+//	{
+//		total +=  1 ;
+//		System.out.println(total);
+//	}
+//	if(e.getSource() == sub)
+//	{
+//		total -= 1 ;
+//		System.out.println(total);
+//	}
+//	if(e.getSource() == mul)
+//	{
+//		total =   ;
+//		System.out.println(total);
+//	}
+//	if(e.getSource() == sub2)
+//	{
+//		total -= 2 ;
+//		System.out.println(total);
+//	}
 }
 }
