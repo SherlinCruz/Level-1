@@ -18,7 +18,6 @@ public class ColorMe implements ActionListener {
 	JButton b2 = new JButton();
 	JButton b3 = new JButton();
 	JTextField text = new JTextField();
-	
 
 	public static void main(String[] args) {
 		ColorMe colorme = new ColorMe();
@@ -44,8 +43,6 @@ public class ColorMe implements ActionListener {
 		b1.addActionListener(this);
 		b2.addActionListener(this);
 		b3.addActionListener(this);
-		
-		
 
 	}
 
