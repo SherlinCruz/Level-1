@@ -17,10 +17,17 @@ public class ColorMe implements ActionListener {
 	JButton b1 = new JButton();
 	JButton b2 = new JButton();
 	JButton b3 = new JButton();
-	JTextField text = new JTextField();
+	JTextField text = new JTextField(10);
+	boolean y;
+
+	String option1;
+	String option2;
+	String option3;
 
 	public static void main(String[] args) {
 		ColorMe colorme = new ColorMe();
+		TextOption colorOption = new TextOption("E", "R", "N", "D");
+
 	}
 
 	ColorMe() {
@@ -43,39 +50,72 @@ public class ColorMe implements ActionListener {
 		b1.addActionListener(this);
 		b2.addActionListener(this);
 		b3.addActionListener(this);
-
-	}
-
-	void inputs(int font) {
-
 		text.addActionListener(this);
 
+		frame.pack();
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
 		if (e.getSource() == b1) {
-
-			label.setText("You chose BLUE");
-			label.setForeground(Color.BLUE);
+			if (y == true) {
+				label.setText("Don't change me !");
+				label.setOpaque(true);
+				label.setBackground(Color.blue);
+				System.out.println(y);
+				y = false;
+			} else {
+				label.setText("Don't change me !");
+				label.setForeground(Color.blue);
+				System.out.println(y);
+				y = true;
+			}
 
 		} else if (e.getSource() == b2) {
 
-			label.setText("You chose RED");
-			label.setForeground(Color.RED);
+			if (y == true) {
+				label.setText("Don't change me !");
+				label.setOpaque(true);
+
+				label.setBackground(Color.RED);
+				System.out.println(y);
+				y = false;
+			} else {
+				label.setText("RED");
+				label.setForeground(Color.RED);
+				System.out.println(y);
+				y = true;
+			}
 
 		} else if (e.getSource() == b3) {
 
-			label.setText("You chose ORANGE");
-			label.setForeground(Color.ORANGE);
-		} else {
-			JOptionPane.showMessageDialog(null, "CANCELLED!");
+			label.setText("ORANGE");
+
+			if (y == true) {
+				label.setText("Don't change me !");
+				label.setOpaque(true);
+
+				label.setBackground(Color.ORANGE);
+				System.out.println(y);
+				y = false;
+			} else {
+				label.setText("RED");
+				label.setForeground(Color.ORANGE);
+				System.out.println(y);
+				y = true;
+			}
+
+		} else if (e.getSource() == text) {
+
+			int x = Integer.parseInt(text.getText());
+			label.setFont(new Font("Times New Roman", Font.ITALIC, x));
+
 		}
 
-		int x = Integer.parseInt(text.getText());
-
-		label.setFont(new Font("Times New Roman", 0, x));
+		else {
+			JOptionPane.showMessageDialog(null, "CANCELLED!");
+		}
 
 	}
 
